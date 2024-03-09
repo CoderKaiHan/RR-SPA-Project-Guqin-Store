@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+Nav {
+  font-size: larger;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+NavDropdown {
+  font-family: 'Courier New', Courier, monospace;
+}
