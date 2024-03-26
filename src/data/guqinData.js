@@ -16,7 +16,7 @@ const guqinData = () => {
             },
             {
                 'id':2,
-                'category':'level 1',
+                'category':'level 2',
                 'name':'someName',
                 'madeBy':'person',
                 'wood':'wood1, wood2,wood3',
@@ -29,7 +29,7 @@ const guqinData = () => {
             },
             {
                 'id':3,
-                'category':'level 1',
+                'category':'level 3',
                 'name':'someName',
                 'madeBy':'person',
                 'wood':'wood1, wood2,wood3',
