@@ -17,13 +17,13 @@ const Navigation = () => {
                 <Nav className="me-auto">
                   <Nav.Link href="/home">Home</Nav.Link>
                   <NavDropdown title="Guqin" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="guqin_level_1">Level 1</NavDropdown.Item>
-                    <NavDropdown.Item href="guqin_level_2">
+                    <NavDropdown.Item href="/guqin/level_1">Level 1</NavDropdown.Item>
+                    <NavDropdown.Item href="/guqin/level_2">
                       Level 2
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="guqin_level_3">Level 3</NavDropdown.Item>
+                    <NavDropdown.Item href="/guqin/level_3">Level 3</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="guqin_level_all">
+                    <NavDropdown.Item href="/guqin/level_all">
                       Browse all
                     </NavDropdown.Item>
                   </NavDropdown>

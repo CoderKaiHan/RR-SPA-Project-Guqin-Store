@@ -1,5 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import guqinData from '../data/guqinData';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -7,28 +6,25 @@ import Button from 'react-bootstrap/Button';
 
 const Gallery = () => {
     
-    const navigate = useNavigate();
-    const guqin = guqinData() || [];
-
-    useEffect (() => {
-      const path = navigate().location.pathname;
-      console.log('path:', path);
+    const guqin = guqinData();
+    const { level } = useParams();
+    console.log('path:', level);
 
       let filteredGuqinData;
-      if (path.endsWith('/guqin_level_1')){
+      if (level === 'level_1'){
         filteredGuqinData = guqin.filter(item => item.category === 'level 1');
-      }else if (path.endsWith('/guqin_level_2')){
+      }else if (level === 'level_2'){
         filteredGuqinData = guqin.filter(item => item.category === 'level 2');
-      }else if (path.endsWith('/guqin_level_3')){
+      }else if (level === 'level_3'){
         filteredGuqinData = guqin.filter(item => item.category === 'level 3');
-      }else if (path.endsWith('/guqin_level_all')){
+      }else if (level === 'level_all'){
         filteredGuqinData = guqin;
       }else {
         console.log('No data found');
         return null;
       }
 
-      if (path.endsWith('/guqin_level_1') || path.endsWith('/guqin_level_2') || path.endsWith('/guqin_level_3') || path.endsWith('/guqin_level_all')){
+      if (level === 'level_1' || level === 'level_2' || level === 'level_3' || level === 'level_all'){
         return (
           <div style={{display:"flex", justifyContent:"space-evenly", margin:"50px"}}>
             {filteredGuqinData.map(
@@ -51,7 +47,6 @@ const Gallery = () => {
           </div>
         );
       }
-    });   
-}
+    };
 
 export default Gallery;

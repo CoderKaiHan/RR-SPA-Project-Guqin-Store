@@ -14,10 +14,7 @@ function App() {
           <Route path='/home' element= {<Home />}/>
           <Route path='/' element= {<Home />}/>
           <Route path= '/gallery' element={<Gallery />}/>
-          <Route path= '/guqin_level_1' element={<Gallery />}/>
-          <Route path= '/guqin_level_2' element={<Gallery />}/>
-          <Route path= '/guqin_level_3' element={<Gallery />}/>
-          <Route path= '/guqin_level_all' element={<Gallery />}/>
+          <Route path= '/guqin/:level' element={<Gallery />}/>
         </Routes>
       </Router>
     </div>
